@@ -25,6 +25,10 @@ body.standalone .standalone-hidden {
   display: none;
 }
 
+::selection {
+  background: #CD6C92;
+}
+
 .search-container {
   max-width: 80%;
   margin: 0 auto;

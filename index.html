@@ -12,16 +12,16 @@
     <meta name="description" content="Quickly find the current time for anywhere in the world.">
     <meta name="keywords" content="clock, world clock, timezone, time zone, what time is it, time, date">
 
-    <!-- <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel="apple-touch-icon" href="img/ios/AppIcon.appiconset/Icon-60@2x.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/ios/AppIcon.appiconset/Icon-60@3x.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="img/ios/AppIcon.appiconset/Icon-76.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="img/ios/AppIcon.appiconset/Icon-76@2x.png" />
-    <link rel="apple-touch-icon" sizes="58x58" href="img/ios/AppIcon.appiconset/Icon-Small@2x.png" /> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/ios/AppIcon.appiconset/Icon-App-60x60@3x.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/ios/AppIcon.appiconset/Icon-App-76x76@1x.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/ios/AppIcon.appiconset/Icon-App-76x76@2x.png" />
+    <link rel="apple-touch-icon" sizes="58x58" href="img/ios/AppIcon.appiconset/Icon-App-29x29@2x.png" />
 
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/style.css?v=1" rel="stylesheet">
+    <link href="css/style.css?v=2" rel="stylesheet">
 
     <script src="https://use.typekit.net/oiv4lzg.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -47,7 +47,7 @@
 
     <div class="search-container">
       <form id="clock-search">
-          <input class="search-input" id="location-query" placeholder="My Location" type="text" />
+          <input onClick="this.setSelectionRange(0, this.value.length)" class="search-input" id="location-query" placeholder="My Location" type="text" />
       </form>
     </div>
 
