@@ -2,7 +2,7 @@ $(function() {
 
     // VARIABLE DEFINITIONS
 
-    var gmapsApiKey = 'AIzaSyCk7o5YvxgXC3Q8YGet1Srp8v2bN_5R6LA',
+    var gmapsApiKey = 'AIzaSyAUjWJcZ66Al0FYo6VN0G-qzwiMLGkhZCc',
         timezone    = moment.tz.guess(),
         timeEl      = $('#time'),
         dateEl      = $('#date');
@@ -11,7 +11,7 @@ $(function() {
     var locationAutocomplete = new google.maps.places.Autocomplete(
         document.getElementById('location-query'),
         {
-          types: ['(cities)']
+          types: ['(regions)']
         }
     );
 
@@ -21,8 +21,8 @@ $(function() {
     // METHOD DEFINITIONS
 
     function updateClock() {
-        timeEl.text(moment.tz(timezone).format("h:mm:ss a"));
-        dateEl.text(moment.tz(timezone).format("dddd, MMMM Do YYYY"));
+        timeEl.text(moment.tz(timezone).format("h:mm:ss A"));
+        dateEl.text(moment.tz(timezone).format("dddd"));
     }
 
     function getTimeZone(lat,lon,name) {
@@ -43,7 +43,7 @@ $(function() {
                 }
                 else {
                     // console.log('Time zone API Error');
-                    // TODO: error function
+                    alert('An error occured, please try again.');
                 }
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -51,7 +51,7 @@ $(function() {
                 // console.log(jqXHR);
                 // console.log(textStatus);
                 // console.log(errorThrown);
-                // TODO: error function
+                alert('An error occured, please try again.');
             },
             complete: function() {}
         });
@@ -85,6 +85,7 @@ $(function() {
 
     updateClock();
     setInterval(updateClock, 1000);
+    $('#location-query').focus();
 
     if (window.navigator.standalone) {
         // The app is running in standalone mode.

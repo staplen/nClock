@@ -10,7 +10,7 @@
 
     <title>nClock</title>
     <meta name="description" content="Quickly find the current time for anywhere in the world.">
-    <meta name="keywords" content="clock, world clock, timezone, time zone">
+    <meta name="keywords" content="clock, world clock, timezone, time zone, what time is it, time, date">
 
     <!-- <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel="apple-touch-icon" href="img/ios/AppIcon.appiconset/Icon-60@2x.png" />
@@ -27,13 +27,13 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <script>
-      // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      // ga('create', '', 'auto');
-      // ga('send', 'pageview');
+      ga('create', 'UA-28679304-13', 'auto');
+      ga('send', 'pageview');
     </script>
 
   </head>
@@ -42,12 +42,12 @@
     <div id="info"><a href="mailto:nclock@nicostaple.com"><i class="fa fa-question-circle" aria-hidden="true"></i></a></div>
 
     <div id="intro">
-      <h1>nClock</h1>
+      <h1><i class="fa fa-clock-o" aria-hidden="true"></i></h1>
     </div>
 
-    <div class="search-container active">
+    <div class="search-container">
       <form id="clock-search">
-          <input class="search-input" id="location-query" placeholder="Washington, DC" type="text" required />
+          <input class="search-input" id="location-query" placeholder="My Location" type="text" />
       </form>
     </div>
 
@@ -57,10 +57,10 @@
     </div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/moment.min.js"></script>
-    <script src="js/moment-timezone-with-data-2012-2022.min.js"></script>
+    <script src="js/moment-2.18.1.min.js"></script>
+    <script src="js/moment-timezone-with-data-2012-2022-0.5.13.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyD3TGoXHm5Vn3nGg1NWUqr08y2N2Usd3VU"></script>
-    <script src="js/app.js?v=1"></script>
+    <script src="js/app.js?v=2"></script>
 
   </body>
 </html>
