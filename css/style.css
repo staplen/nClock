@@ -178,6 +178,10 @@ body .hdpi.pac-logo:after {
     font-size: 20px;
     line-height: 20px;
   }
+  .pac-item, .pac-item span {
+    font-size: 18px;
+    line-height: 18px;
+  }
   .clock-container p {
     font-size: 40px;
   }
