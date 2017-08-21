@@ -113,7 +113,8 @@ input, a {
   text-overflow: ellipsis;
   width: 100%;
 }
-.search-input:focus {
+.search-input:focus,
+.search-input:hover {
   background: #272D39;
   outline: none;
 }

@@ -6,6 +6,7 @@ $(function() {
         timezone     = moment.tz.guess(),
         timeEl       = $('#time'),
         dateEl       = $('#date'),
+        queryEl      = $('#location-query'),
         timeFormat12 = "h:mm:ss A",
         timeFormat24 = "HH:mm:ss",
         timeFormat   = timeFormat12,
@@ -44,6 +45,7 @@ $(function() {
                 if (data.status === 'OK') {
                     timezone = data.timeZoneId;
                     updateClock();
+                    queryEl.blur();
                 }
                 else {
                     // console.log('Time zone API Error');
@@ -95,7 +97,7 @@ $(function() {
 
     updateClock();
     setInterval(updateClock, 1000);
-    $('#location-query').focus();
+    queryEl.focus();
 
     if (window.navigator.standalone) {
         // The app is running in standalone mode.
